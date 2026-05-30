@@ -1,1 +1,103 @@
+<h1 align="center">⚡ ClaudeTeleport</h1>
+<p align="center">
+  <b>One click. Right window. Every time.</b><br>
+  <sub>Never lose your Claude Code terminal again.</sub>
+</p>
 
+<p align="center">
+  <a href="https://yanchengsi.gumroad.com/l/qzvzii"><img src="https://img.shields.io/badge/Buy%20on%20Gumroad-%244.99-FF90E8?style=flat-square&logo=gumroad&logoColor=white&labelColor=000000" alt="Buy on Gumroad"></a>
+  <a href="#"><img src="https://img.shields.io/badge/platform-Windows%2010%2F11-0078D6?style=flat-square&logo=windows" alt="Platform"></a>
+  <a href="#"><img src="https://img.shields.io/badge/version-v1.1-44cc11?style=flat-square" alt="Version"></a>
+</p>
+<img width="1408" height="736" alt="Generated Image May 30, 2026 - 7_14PM" src="https://github.com/user-attachments/assets/0b3c2c27-3038-4582-888c-b4f6acd5121c" />
+
+---
+
+## What is this?
+
+You're deep in flow. Claude Code hits a permission prompt. The terminal is buried under 17 windows. You don't notice for 5 minutes.
+
+**ClaudeTeleport fixes this.** The instant Claude needs your approval, a native Windows notification appears. Click it. You're there — same window, same session, zero delay.
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# 1. Download the ZIP (or git clone)
+# 2. Double-click:
+
+install.bat
+
+# 3. Done. Seriously, that's it.
+```
+
+**Verify it works:** ask Claude Code *"Create a file called hello.txt with the word test in it."* You'll see a toast the moment the permission prompt fires.
+
+To remove: double-click `uninstall.bat`.
+
+---
+
+## 🧠 Why This Actually Works
+
+Most tools guess which terminal to focus. We don't.
+
+| Approach | Accuracy |
+|----------|----------|
+| Process tree walking (`mintty → bash → claude`) | ❌ Broken on MSYS2 |
+| "First mintty wins" | ❌ Wrong window if you have multiple |
+| Window title heuristics | ⚠️ Works ~80% of the time |
+| **GetForegroundWindow at hook time → direct HWND** | **✅ 100%** |
+
+When Claude Code fires a permission prompt, **your active window IS the correct terminal**. We capture the HWND at that exact millisecond and embed it in the notification button. No guessing. No heuristics. Pointer-level precision.
+
+---
+
+## 💻 Compatibility
+
+| Terminal | Support |
+|----------|---------|
+| Git Bash (mintty) | ✅ Primary target — HWND-level precision |
+| Windows Terminal | ✅ Full support |
+| CMD / PowerShell | ✅ Full support |
+| VS Code / Cursor built-in | ⚠️ Functional via fallback matching |
+
+**Requirements:** Windows 10/11, .NET Framework 4.x (built-in), [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+
+---
+
+## 🛒 Get It
+
+<p align="center">
+  <a href="https://yanchengsi.gumroad.com/l/qzvzii">
+    <img src="https://img.shields.io/badge/Buy%20on%20Gumroad-%244.99-FF90E8?style=for-the-badge&logo=gumroad&logoColor=white&labelColor=000000" alt="Buy on Gumroad">
+  </a>
+  <br>
+  <sub>Standard License $4.99 · Full source code included · All sales final</sub>
+</p>
+
+---
+
+## ⚖️ Legal
+
+**Refund Policy:** Due to the digital nature of this product and the inclusion of full source code in the package, all sales are final. No refunds. Please check the compatibility list before purchasing.
+
+**Disclaimer:** This is an independent open-source/source-available utility. It is NOT affiliated with, sponsored by, or endorsed by Anthropic or the official Claude Code team.
+
+---
+
+---
+
+<h1 align="center">⚡ ClaudeTeleport</h1>
+<p align="center">
+  <b>一键跳转。精准窗口。从不落空。</b><br>
+  <sub>再也不用盯着 Claude Code 等授权。</sub>
+</p>
+
+<p align="center">
+  <a href="https://yanchengsi.gumroad.com/l/qzvzii"><img src="https://img.shields.io/badge/Gumroad%20购买-%244.99-FF90E8?style=flat-square&logo=gumroad&logoColor=white&labelColor=000000" alt="Gumroad 购买"></a>
+  <a href="#"><img src="https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=flat-square&logo=windows" alt="平台"></a>
+  <a href="#"><img src="https://img.shields.io/badge/版本-v1.1-44cc11?style=flat-square" alt="版本"></a>
+</p>
+
+---
