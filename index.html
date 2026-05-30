@@ -1,103 +1,306 @@
-<h1 align="center">⚡ ClaudeTeleport</h1>
-<p align="center">
-  <b>One click. Right window. Every time.</b><br>
-  <sub>Never lose your Claude Code terminal again.</sub>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p align="center">
-  <a href="https://yanchengsi.gumroad.com/l/qzvzii"><img src="https://img.shields.io/badge/Buy%20on%20Gumroad-%244.99-FF90E8?style=flat-square&logo=gumroad&logoColor=white&labelColor=000000" alt="Buy on Gumroad"></a>
-  <a href="#"><img src="https://img.shields.io/badge/platform-Windows%2010%2F11-0078D6?style=flat-square&logo=windows" alt="Platform"></a>
-  <a href="#"><img src="https://img.shields.io/badge/version-v1.1-44cc11?style=flat-square" alt="Version"></a>
-</p>
-<img width="1408" height="736" alt="Generated Image May 30, 2026 - 7_14PM" src="https://github.com/user-attachments/assets/0b3c2c27-3038-4582-888c-b4f6acd5121c" />
+<!-- Primary SEO -->
+<title>ClaudeTeleport — One-Click Focus Back to Claude Code Terminal on Windows</title>
+<meta name="description" content="Tired of missing Claude Code permission prompts? ClaudeTeleport pops a native Windows notification the instant Claude needs your approval. Click it, jump straight back to the exact terminal. 14KB, zero-config, source-available.">
+<meta name="keywords" content="Claude Code notification, Claude Code permission prompt, Windows toast notification, Claude Code terminal focus, Claude Code hook, ClaudeTeleport, Claude Code Windows">
+<meta name="author" content="ClaudeTeleport">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yanchengsi.github.io/-claude-teleport/">
 
----
+<!-- Open Graph -->
+<meta property="og:title" content="ClaudeTeleport — Never Miss a Claude Code Permission Prompt Again">
+<meta property="og:description" content="One click. Right window. Every time. Native Windows notifications for Claude Code. 14KB, zero-config, $4.99.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yanchengsi.github.io/-claude-teleport/">
+<meta property="og:site_name" content="ClaudeTeleport">
+<meta property="og:image" content="https://github.com/user-attachments/assets/0b3c2c27-3038-4582-888c-b4f6acd5121c">
 
-## What is this?
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ClaudeTeleport — One-Click Back to Claude Code Terminal">
+<meta name="twitter:description" content="14KB. Zero config. Pointer-level accuracy. Never miss a permission prompt again.">
+<meta name="twitter:image" content="https://github.com/user-attachments/assets/0b3c2c27-3038-4582-888c-b4f6acd5121c">
 
-You're deep in flow. Claude Code hits a permission prompt. The terminal is buried under 17 windows. You don't notice for 5 minutes.
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --yellow: #d29922;
+    --red: #f85149;
+    --pink: #f778ba;
+    --purple: #a371f7;
+    --radius: 8px;
+  }
 
-**ClaudeTeleport fixes this.** The instant Claude needs your approval, a native Windows notification appears. Click it. You're there — same window, same session, zero delay.
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
 
----
+  .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
-## 🚀 Quick Start
+  /* ── Nav ── */
+  nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 24px; max-width: 780px; margin: 0 auto;
+    font-size: 0.9rem;
+  }
+  nav .logo { font-weight: 700; color: var(--text); font-size: 1.05rem; letter-spacing: -0.02em; }
+  nav a { color: var(--muted); }
+  nav a:hover { color: var(--text); text-decoration: none; }
+  nav .nav-links { display: flex; gap: 20px; }
 
-```bash
-# 1. Download the ZIP (or git clone)
-# 2. Double-click:
+  /* ── Hero ── */
+  .hero { text-align: center; padding: 72px 24px 48px; }
+  .hero-icon { font-size: 56px; margin-bottom: 16px; display: block; }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800; letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--accent), var(--purple));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin-bottom: 12px;
+  }
+  .hero .subtitle { font-size: 1.25rem; color: var(--muted); font-weight: 400; max-width: 480px; margin: 0 auto 24px; }
+  .hero .pain {
+    font-size: 0.95rem; color: var(--yellow);
+    background: rgba(210,153,34,0.1); border: 1px solid rgba(210,153,34,0.2);
+    border-radius: var(--radius); padding: 14px 20px;
+    display: inline-block; margin-bottom: 32px; max-width: 520px;
+  }
 
-install.bat
+  .btn {
+    display: inline-block; padding: 14px 36px; font-size: 1.05rem; font-weight: 600;
+    border-radius: var(--radius); transition: all 0.15s; cursor: pointer; text-decoration: none;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, #f778ba, #a371f7); color: #fff;
+    box-shadow: 0 4px 20px rgba(167,113,247,0.35);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(167,113,247,0.5); text-decoration: none; }
+  .btn-ghost { color: var(--accent); border: 1px solid var(--border); margin-left: 12px; }
+  .btn-ghost:hover { background: var(--surface); text-decoration: none; }
 
-# 3. Done. Seriously, that's it.
-```
+  .hero-meta {
+    margin-top: 20px; font-size: 0.85rem; color: var(--muted);
+    display: flex; gap: 18px; justify-content: center; flex-wrap: wrap;
+  }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 5px; }
 
-**Verify it works:** ask Claude Code *"Create a file called hello.txt with the word test in it."* You'll see a toast the moment the permission prompt fires.
+  /* ── Screenshot ── */
+  .screenshot {
+    text-align: center; padding: 0 24px 32px;
+  }
+  .screenshot img {
+    max-width: 100%; border-radius: 12px; border: 1px solid var(--border);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  }
 
-To remove: double-click `uninstall.bat`.
+  /* ── Sections ── */
+  section { padding: 48px 0; border-top: 1px solid var(--border); }
+  section:first-of-type { border-top: none; }
+  h2 { font-size: 1.65rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.01em; }
 
----
+  /* ── Accuracy Table ── */
+  .accuracy-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+  .accuracy-table th, .accuracy-table td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  .accuracy-table th { color: var(--muted); font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .accuracy-table tr:last-child td { border-bottom: 2px solid var(--green); }
+  .accuracy-table tr:last-child td:last-child { color: var(--green); font-weight: 700; }
 
-## 🧠 Why This Actually Works
+  .highlight-box {
+    background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+    border-radius: var(--radius); padding: 20px 24px; margin-top: 20px; font-size: 0.95rem;
+  }
+  .highlight-box strong { color: var(--accent); }
 
-Most tools guess which terminal to focus. We don't.
+  /* ── Code ── */
+  pre {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 20px 24px; overflow-x: auto; margin: 16px 0;
+  }
+  pre code { font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace; font-size: 0.85rem; }
+  .comment { color: var(--muted); }
 
-| Approach | Accuracy |
-|----------|----------|
-| Process tree walking (`mintty → bash → claude`) | ❌ Broken on MSYS2 |
-| "First mintty wins" | ❌ Wrong window if you have multiple |
-| Window title heuristics | ⚠️ Works ~80% of the time |
-| **GetForegroundWindow at hook time → direct HWND** | **✅ 100%** |
+  /* ── Compatibility ── */
+  .compat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+  .compat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+  .compat-card .status { font-weight: 700; margin-bottom: 4px; }
+  .compat-card .term { color: var(--muted); font-size: 0.85rem; }
+  .compat-card.primary { border-color: var(--green); }
+  .compat-card.warn { border-color: var(--yellow); }
 
-When Claude Code fires a permission prompt, **your active window IS the correct terminal**. We capture the HWND at that exact millisecond and embed it in the notification button. No guessing. No heuristics. Pointer-level precision.
+  .reqs { margin-top: 20px; font-size: 0.9rem; color: var(--muted); line-height: 2; }
 
----
+  /* ── Pricing ── */
+  .pricing { text-align: center; }
+  .pricing .card {
+    display: inline-block; background: var(--surface); border: 2px solid var(--purple);
+    border-radius: 12px; padding: 36px 48px; text-align: center;
+  }
+  .price { font-size: 3rem; font-weight: 800; }
+  .price sub { font-size: 1.25rem; color: var(--muted); font-weight: 400; }
+  .price-desc { color: var(--muted); margin: 8px 0 24px; font-size: 0.9rem; }
+  .features { text-align: left; color: var(--muted); font-size: 0.9rem; list-style: none; margin-bottom: 24px; }
+  .features li { padding: 3px 0; }
 
-## 💻 Compatibility
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid var(--border); padding: 40px 24px; text-align: center;
+    font-size: 0.85rem; color: var(--muted); line-height: 2;
+  }
+  footer strong { color: var(--text); }
 
-| Terminal | Support |
-|----------|---------|
-| Git Bash (mintty) | ✅ Primary target — HWND-level precision |
-| Windows Terminal | ✅ Full support |
-| CMD / PowerShell | ✅ Full support |
-| VS Code / Cursor built-in | ⚠️ Functional via fallback matching |
+  /* ── Mobile ── */
+  @media (max-width: 640px) {
+    .hero { padding: 48px 16px 24px; }
+    .compat-grid { grid-template-columns: 1fr; }
+    .btn-ghost { margin-left: 0; margin-top: 12px; }
+    .pricing .card { padding: 24px 28px; }
+    nav .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
 
-**Requirements:** Windows 10/11, .NET Framework 4.x (built-in), [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+<!-- ═══════════ NAV ═══════════ -->
+<nav>
+  <span class="logo">&#x26A1; ClaudeTeleport</span>
+  <div class="nav-links">
+    <a href="#how">How</a>
+    <a href="#quickstart">Install</a>
+    <a href="#compat">Compatibility</a>
+    <a href="#pricing">Buy</a>
+  </div>
+</nav>
 
----
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="container">
+    <span class="hero-icon">&#x26A1;</span>
+    <h1>ClaudeTeleport</h1>
+    <p class="subtitle">One click. Right window. Every time.</p>
+    <p class="pain">
+      Claude pops a permission prompt. Your terminal is buried under 17 windows. <strong>You don't notice for 5 minutes.</strong> Every Claude Code user knows this pain.
+    </p>
+    <div>
+      <a href="https://yanchengsi.gumroad.com/l/qzvzii" class="btn btn-primary">Buy on Gumroad &mdash; $4.99</a>
+      <a href="#how" class="btn btn-ghost">How it works &darr;</a>
+    </div>
+    <div class="hero-meta">
+      <span>&#x1F4E6; 14KB</span>
+      <span>&#x26A1; One-click install</span>
+      <span>&#x1F512; 100% local</span>
+      <span>&#x1F4BB; Windows 10/11</span>
+    </div>
+  </div>
+</section>
 
-## 🛒 Get It
+<!-- ══════ SCREENSHOT ══════ -->
+<section class="screenshot">
+  <div class="container">
+    <img src="https://github.com/user-attachments/assets/0b3c2c27-3038-4582-888c-b4f6acd5121c" alt="ClaudeTeleport notification screenshot" loading="lazy">
+  </div>
+</section>
 
-<p align="center">
-  <a href="https://yanchengsi.gumroad.com/l/qzvzii">
-    <img src="https://img.shields.io/badge/Buy%20on%20Gumroad-%244.99-FF90E8?style=for-the-badge&logo=gumroad&logoColor=white&labelColor=000000" alt="Buy on Gumroad">
-  </a>
-  <br>
-  <sub>Standard License $4.99 · Full source code included · All sales final</sub>
-</p>
+<!-- ═══════════ WHY ═══════════ -->
+<section id="how">
+  <div class="container">
+    <h2>&#x1F9E0; Why This Actually Works</h2>
+    <p style="color:var(--muted);margin-bottom:16px;">Most tools <em>guess</em> which terminal to focus. We don't.</p>
 
----
+    <table class="accuracy-table">
+      <thead>
+        <tr><th>Approach</th><th>Accuracy</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Process tree walking (<code>mintty &rarr; bash &rarr; claude</code>)</td><td style="color:var(--red)">&#x2716; Broken on MSYS2</td></tr>
+        <tr><td>"First mintty wins"</td><td style="color:var(--red)">&#x2716; Wrong window with multiple terminals</td></tr>
+        <tr><td>Window title heuristics</td><td style="color:var(--yellow)">&#x26A0; ~80% at best</td></tr>
+        <tr><td><strong>GetForegroundWindow at hook time &rarr; direct HWND</strong></td><td>&#x2705; 100%</td></tr>
+      </tbody>
+    </table>
 
-## ⚖️ Legal
+    <div class="highlight-box">
+      <p><strong>The key insight:</strong> When Claude Code fires a permission prompt, <strong>your active window IS the correct terminal</strong>. We capture the HWND at that exact millisecond and embed it in the notification button. No guessing. No heuristics. <strong>Pointer-level precision.</strong></p>
+    </div>
+  </div>
+</section>
 
-**Refund Policy:** Due to the digital nature of this product and the inclusion of full source code in the package, all sales are final. No refunds. Please check the compatibility list before purchasing.
+<!-- ═══════════ QUICK START ═══════════ -->
+<section id="quickstart">
+  <div class="container">
+    <h2>&#x1F680; Install in One Click</h2>
+    <p style="color:var(--muted);margin-bottom:12px;">Download the ZIP, extract anywhere, double-click one file &mdash; you're done.</p>
+    <pre><code><span class="comment"># 1. Download from Gumroad</span>
+<span class="comment"># 2. Extract anywhere</span>
+<span class="comment"># 3. Double-click:</span>
 
-**Disclaimer:** This is an independent open-source/source-available utility. It is NOT affiliated with, sponsored by, or endorsed by Anthropic or the official Claude Code team.
+<b>install.bat</b>
 
----
+<span class="comment"># That's it. Seriously.</span></code></pre>
+    <p style="margin-top:8px;"><strong>Verify it works:</strong> ask Claude Code <em>"Create a file called hello.txt with the word test in it."</em> You'll see a toast the moment permission fires.</p>
+    <p style="color:var(--muted);font-size:0.85rem;">To remove: double-click <code>uninstall.bat</code>.</p>
+  </div>
+</section>
 
----
+<!-- ═══════════ COMPATIBILITY ═══════════ -->
+<section id="compat">
+  <div class="container">
+    <h2>&#x1F4BB; Compatibility</h2>
+    <div class="compat-grid">
+      <div class="compat-card primary"><div class="status" style="color:var(--green)">&#x2705; Primary Target</div><div class="term">Git Bash (mintty) &mdash; HWND-level precision</div></div>
+      <div class="compat-card"><div class="status" style="color:var(--green)">&#x2705; Full Support</div><div class="term">Windows Terminal / CMD / PowerShell</div></div>
+      <div class="compat-card warn"><div class="status" style="color:var(--yellow)">&#x26A0; Fallback Matching</div><div class="term">VS Code / Cursor built-in terminals</div></div>
+      <div class="compat-card" style="border-color:var(--accent)"><div class="status" style="color:var(--accent)">&#x1F6E0; Requirements</div><div class="term">Win 10/11 &middot; .NET 4.x (built-in) &middot; Claude Code</div></div>
+    </div>
+    <p class="reqs"><strong>Zero runtime dependencies.</strong> BurntToast is auto-installed. No Python. No Node. No Docker. No Electron. <strong>14KB total.</strong></p>
+  </div>
+</section>
 
-<h1 align="center">⚡ ClaudeTeleport</h1>
-<p align="center">
-  <b>一键跳转。精准窗口。从不落空。</b><br>
-  <sub>再也不用盯着 Claude Code 等授权。</sub>
-</p>
+<!-- ═══════════ PRICING ═══════════ -->
+<section id="pricing" class="pricing">
+  <div class="container">
+    <h2>&#x1F6D2; Get ClaudeTeleport</h2>
+    <p style="color:var(--muted);margin-bottom:28px;">One-time purchase. Full source code included. No subscription.</p>
+    <div class="card">
+      <div class="price">$4.99<sub> USD</sub></div>
+      <div class="price-desc">Standard License</div>
+      <ul class="features">
+        <li>&#x2705; Full Windows utility</li>
+        <li>&#x2705; Complete source code (C# + PowerShell)</li>
+        <li>&#x2705; One-click installer &amp; uninstaller</li>
+        <li>&#x2705; Free updates (v1.x)</li>
+      </ul>
+      <a href="https://yanchengsi.gumroad.com/l/qzvzii" class="btn btn-primary" style="display:block;text-align:center;">Buy on Gumroad</a>
+    </div>
+  </div>
+</section>
 
-<p align="center">
-  <a href="https://yanchengsi.gumroad.com/l/qzvzii"><img src="https://img.shields.io/badge/Gumroad%20购买-%244.99-FF90E8?style=flat-square&logo=gumroad&logoColor=white&labelColor=000000" alt="Gumroad 购买"></a>
-  <a href="#"><img src="https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=flat-square&logo=windows" alt="平台"></a>
-  <a href="#"><img src="https://img.shields.io/badge/版本-v1.1-44cc11?style=flat-square" alt="版本"></a>
-</p>
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="container">
+    <p><strong>Refund Policy:</strong> Due to the digital nature of this product and the inclusion of full source code in the package, <strong>all sales are final.</strong> No refunds. Please check the compatibility list before purchasing.</p>
+    <p style="margin-top:12px;"><strong>Disclaimer:</strong> This is an independent source-available utility. It is <strong>NOT</strong> affiliated with, sponsored by, or endorsed by Anthropic or the official Claude Code team.</p>
+    <p style="margin-top:16px;">&copy; 2025 ClaudeTeleport &middot; Built for developers who value their time.</p>
+  </div>
+</footer>
 
----
+</body>
+</html>
