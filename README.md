@@ -5,8 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/yanchengsi/cc-notificion"><img src="https://img.shields.io/badge/Source%20Code-cc--notificion-181717?style=flat-square&logo=github" alt="Source Code"></a>
-  <a href="https://yanchengsi.gumroad.com"><img src="https://img.shields.io/badge/Buy%20on%20Gumroad-%244.99-FF90E8?style=flat-square&logo=gumroad&logoColor=white&labelColor=000000" alt="Buy on Gumroad"></a>
+  <a href="https://yanchengsi.gumroad.com/l/qzvzii"><img src="https://img.shields.io/badge/Buy%20on%20Gumroad-%244.99-FF90E8?style=flat-square&logo=gumroad&logoColor=white&labelColor=000000" alt="Buy on Gumroad"></a>
   <a href="#"><img src="https://img.shields.io/badge/platform-Windows%2010%2F11-0078D6?style=flat-square&logo=windows" alt="Platform"></a>
   <a href="#"><img src="https://img.shields.io/badge/version-v1.1-44cc11?style=flat-square" alt="Version"></a>
 </p>
@@ -69,16 +68,11 @@ When Claude Code fires a permission prompt, **your active window IS the correct 
 ## 🛒 Get It
 
 <p align="center">
-  <a href="https://yanchengsi.gumroad.com">
+  <a href="https://yanchengsi.gumroad.com/l/qzvzii">
     <img src="https://img.shields.io/badge/Buy%20on%20Gumroad-%244.99-FF90E8?style=for-the-badge&logo=gumroad&logoColor=white&labelColor=000000" alt="Buy on Gumroad">
   </a>
   <br>
   <sub>Standard License $4.99 · Full source code included · All sales final</sub>
-</p>
-
-<p align="center">
-  <a href="https://github.com/yanchengsi/cc-notificion">⭐ Source Code</a> ·
-  <a href="https://x.com/intent/tweet?text=ClaudeTeleport%20%E2%80%94%20one-click%20teleport%20back%20to%20your%20Claude%20Code%20terminal.%2014KB.%20Zero%20config.%20https%3A%2F%2Fgithub.com%2Fyanchengsi%2F-claude-teleport">🐦 Share on X</a>
 </p>
 
 ---
@@ -100,8 +94,7 @@ When Claude Code fires a permission prompt, **your active window IS the correct 
 </p>
 
 <p align="center">
-  <a href="https://github.com/yanchengsi/cc-notificion"><img src="https://img.shields.io/badge/源代码-cc--notificion-181717?style=flat-square&logo=github" alt="源代码"></a>
-  <a href="https://yanchengsi.gumroad.com"><img src="https://img.shields.io/badge/Gumroad%20购买-%244.99-FF90E8?style=flat-square&logo=gumroad&logoColor=white&labelColor=000000" alt="Gumroad 购买"></a>
+  <a href="https://yanchengsi.gumroad.com/l/qzvzii"><img src="https://img.shields.io/badge/Gumroad%20购买-%244.99-FF90E8?style=flat-square&logo=gumroad&logoColor=white&labelColor=000000" alt="Gumroad 购买"></a>
   <a href="#"><img src="https://img.shields.io/badge/平台-Windows%2010%2F11-0078D6?style=flat-square&logo=windows" alt="平台"></a>
   <a href="#"><img src="https://img.shields.io/badge/版本-v1.1-44cc11?style=flat-square" alt="版本"></a>
 </p>
@@ -164,16 +157,11 @@ Claude Code 触发权限请求时，**你正在操作的那个窗口就是正确
 ## 🛒 获取
 
 <p align="center">
-  <a href="https://yanchengsi.gumroad.com">
+  <a href="https://yanchengsi.gumroad.com/l/qzvzii">
     <img src="https://img.shields.io/badge/Gumroad%20购买-%244.99-FF90E8?style=for-the-badge&logo=gumroad&logoColor=white&labelColor=000000" alt="Gumroad 购买">
   </a>
   <br>
   <sub>标准版 $4.99 · 含完整源码 · 售出概不退款</sub>
-</p>
-
-<p align="center">
-  <a href="https://github.com/yanchengsi/cc-notificion">⭐ 源代码</a> ·
-  <a href="https://x.com/intent/tweet?text=ClaudeTeleport%20%E2%80%94%20%E4%B8%80%E9%94%AE%E8%B7%B3%E8%BD%AC%E5%9B%9E%E4%BD%A0%E7%9A%84%20Claude%20Code%20%E7%BB%88%E7%AB%AF%E3%80%8214KB%E3%80%81%E9%9B%B6%E9%85%8D%E7%BD%AE%E3%80%81%E6%B0%B8%E4%B8%8D%E8%90%BD%E7%A9%BA%E3%80%82https%3A%2F%2Fgithub.com%2Fyanchengsi%2F-claude-teleport">🐦 分享到 X</a>
 </p>
 
 ---
