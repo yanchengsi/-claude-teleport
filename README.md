@@ -81,11 +81,15 @@ Pointer-level precision. No heuristics. Perfect for multi-window setups.
 
 ---
 
-## 💬 Why Isn't This Free?
+## 💬 Why Pay for Open Source?
 
-You can absolutely build this yourself in a few hours — **the full source code is right here, open for anyone to read, fork, or audit.** But if your time is worth more than $4.99, `install.bat` takes five seconds. I already did the debugging, the MSYS2 workarounds, and the Windows Toast API arcana so you don't have to.
+The code is here. You can read it, fork it, build it yourself — it'll take an afternoon, and you'll learn something along the way. If that sounds like a fun Saturday, go for it.
 
-This is my first product as a solo dev. If you find it useful, buying a copy means more than you know.
+**What the $4.99 is really for** is skipping the debugging: the MSYS2 process tree dead ends, the Windows Toast API silently dropping notifications without an AppUserModelID, the registry protocol handler quirks, the reinstall edge cases. All the stuff that isn't in any README.
+
+You're paying for the time the tool saves you, not for the code itself.
+
+This is my first product as a solo dev. If you find it useful, becoming a customer genuinely helps. If you don't want to pay, forking and starring the repo still helps. Either way — thanks for checking it out.
 
 ---
 
