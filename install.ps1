@@ -10,6 +10,7 @@ $claudeFocusCs = "$installDir\ClaudeFocus.cs"
 $claudeFocusExe = "$installDir\ClaudeFocus.exe"
 $notifyScript = "$installDir\send-claude-notification.ps1"
 $libCs = "$installDir\lib\WindowHelper.cs"
+$libDll = "$installDir\lib\WindowHelper.dll"
 
 Write-Host ""
 Write-Host "============================================" -ForegroundColor Cyan
@@ -69,6 +70,19 @@ try {
 } catch {
     Write-Host "  ERROR: Compilation failed: $_" -ForegroundColor Red
     Write-Host "  Try running: & '$cscExe' /out:'$claudeFocusExe' /target:winexe /platform:x86 '$claudeFocusCs'" -ForegroundColor Red
+    exit 1
+}
+
+# Also precompile WindowHelper.dll (skips runtime JIT — cuts notification delay from ~4s to <1s)
+Write-Host "     Compiling WindowHelper.dll..." -ForegroundColor DarkGray
+try {
+    $dllResult = & $cscExe /out:$libDll /target:library /platform:x86 /nologo $libCs 2>&1
+    if ($LASTEXITCODE -ne 0) { throw "csc.exe DLL: exit code $LASTEXITCODE" }
+    if (Test-Path $libDll) {
+        Write-Host "     OK: WindowHelper.dll ($((Get-Item $libDll).Length) bytes)" -ForegroundColor DarkGray
+    } else { throw "DLL not found" }
+} catch {
+    Write-Host "  ERROR: DLL compilation failed: $_" -ForegroundColor Red
     exit 1
 }
 

@@ -89,6 +89,23 @@ This is my first product as a solo dev. If you find it useful, buying a copy mea
 
 ---
 
+## 🔧 Changelog
+
+**v1.1 (2025-05-30)** — Speed optimization
+
+- `WindowHelper.dll` is now precompiled at install time (`/target:library`), replacing runtime JIT compilation
+- Notification delay reduced from **~4 seconds → ~1.5 seconds**
+- Fallback: if `.dll` is missing for any reason, the script automatically loads `.cs` source instead — no breakage
+
+**v1.0 (2025-05-30)** — Initial release
+
+- `GetForegroundWindow` + direct HWND for 100% accurate terminal focus
+- One-click `install.bat` / `uninstall.bat`
+- `SetCurrentProcessExplicitAppUserModelID` fix for silent toast drops
+- Force-write hook dedup (prevents reinstall failures)
+
+---
+
 ## 🐛 Feedback & Issues
 
 Found a bug? Have a feature idea? **Open an issue right here on GitHub.** Pull requests welcome.

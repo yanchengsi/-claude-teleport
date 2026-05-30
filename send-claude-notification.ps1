@@ -6,8 +6,14 @@ $log = @()
 $log += "=== $(Get-Date -Format 'o') ==="
 $log += "Hook PID: $PID"
 
-# Load WindowHelper (now includes GetForegroundWindow)
-Add-Type -Path "$PSScriptRoot\lib\WindowHelper.cs" -ErrorAction Stop
+# Load WindowHelper from precompiled DLL (install.ps1 compiles this at install time — no JIT delay)
+$dllPath = "$PSScriptRoot\lib\WindowHelper.dll"
+if (Test-Path $dllPath) {
+    Add-Type -Path $dllPath -ErrorAction Stop
+} else {
+    $log += "DLL not found, falling back to CS compile (will be slow)"
+    Add-Type -Path "$PSScriptRoot\lib\WindowHelper.cs" -ErrorAction Stop
+}
 
 $hwnd = [IntPtr]::Zero
 
