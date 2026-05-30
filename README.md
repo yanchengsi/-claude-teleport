@@ -12,7 +12,7 @@
   <a href="https://github.com/yanchengsi/-claude-teleport"><img src="https://img.shields.io/badge/Open%20Source-%E2%AD%90%20Star%20on%20GitHub-181717?style=flat-square&logo=github" alt="Star on GitHub"></a>
   <a href="https://x.com/vvwnhh"><img src="https://img.shields.io/badge/X-@vvwnhh-1DA1F2?style=flat-square&logo=x" alt="Follow on X"></a>
 </p>
-<img width="1408" height="736" alt="Generated Image May 30, 2026 - 7_14PM" src="https://github.com/user-attachments/assets/0b3c2c27-3038-4582-888c-b4f6acd5121c" />
+<img width="1408" height="736" alt="ClaudeTeleport Windows toast notification screenshot" src="https://github.com/user-attachments/assets/0b3c2c27-3038-4582-888c-b4f6acd5121c" />
 
 ---
 
@@ -26,7 +26,7 @@ You're deep in flow. Claude Code hits a permission prompt. The terminal is burie
 
 ## 🚀 Quick Start
 
-```bash
+```
 # 1. Download the ZIP (or git clone)
 # 2. Double-click:
 
@@ -95,13 +95,13 @@ This is my first product as a solo dev. If you find it useful, becoming a custom
 
 ## 🔧 Changelog
 
-**v1.1 (2025-05-30)** — Speed optimization
+**v1.1 (2026-05-30)** — Speed optimization
 
 - `WindowHelper.dll` is now precompiled at install time (`/target:library`), replacing runtime JIT compilation
 - Notification delay reduced from **~4 seconds → ~1.5 seconds**
 - Fallback: if `.dll` is missing for any reason, the script automatically loads `.cs` source instead — no breakage
 
-**v1.0 (2025-05-30)** — Initial release
+**v1.0 (2026-05-30)** — Initial release
 
 - `GetForegroundWindow` + direct HWND for 100% accurate terminal focus
 - One-click `install.bat` / `uninstall.bat`
