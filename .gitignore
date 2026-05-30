@@ -4,7 +4,9 @@
 # Whitelist: only track our project files
 !/.gitignore
 !/README.md
+!/POSTMORTEM.md
 !/DISCLAIMER.md
+!/index.html
 !/install.bat
 !/install.ps1
 !/uninstall.bat
