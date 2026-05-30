@@ -1,0 +1,20 @@
+# Ignore everything by default (this directory is a Git for Windows installation)
+/*
+
+# Whitelist: only track our project files
+!/.gitignore
+!/README.md
+!/DISCLAIMER.md
+!/install.bat
+!/install.ps1
+!/uninstall.bat
+!/uninstall.ps1
+!/send-claude-notification.ps1
+!/ClaudeFocus.cs
+!/ClaudeFocus.exe
+!/test_toast.ps1
+!/lib/
+!/lib/WindowHelper.cs
+!/.claude/
+/.claude/*
+!/.claude/settings.local.json
