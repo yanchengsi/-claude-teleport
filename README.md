@@ -9,6 +9,7 @@
   <a href="#"><img src="https://img.shields.io/badge/platform-Windows%2010%2F11-0078D6?style=flat-square&logo=windows" alt="Platform"></a>
   <a href="#"><img src="https://img.shields.io/badge/version-v1.1-44cc11?style=flat-square" alt="Version"></a>
 </p>
+<img width="1408" height="736" alt="Generated Image May 30, 2026 - 7_14PM" src="https://github.com/user-attachments/assets/0b3c2c27-3038-4582-888c-b4f6acd5121c" />
 
 ---
 
