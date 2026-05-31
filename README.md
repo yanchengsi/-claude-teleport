@@ -24,20 +24,37 @@ You're deep in flow. Claude Code hits a permission prompt. The terminal is burie
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Get It
+
+<p align="center">
+  <a href="https://yanchengsi.gumroad.com/l/qzvzii">
+    <img src="https://img.shields.io/badge/Buy%20on%20Gumroad-%244.99-FF90E8?style=for-the-badge&logo=gumroad&logoColor=white&labelColor=000000" alt="Buy on Gumroad">
+  </a>
+  <br>
+  <sub>Pre-compiled ZIP · One-click <code>install.bat</code> · All sales final</sub>
+</p>
+
+## 🛠 Build from Source
+
+This repo contains the full source code. To build it yourself:
 
 ```
-# 1. Download the ZIP (or git clone)
-# 2. Double-click:
+# 1. Open PowerShell in this directory
+# 2. Compile the focus handler (requires .NET Framework 4.x, built into Windows):
 
-install.bat
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /out:ClaudeFocus.exe /target:winexe ClaudeFocus.cs
 
-# 3. Done. Seriously, that's it.
+# 3. Register the claudecode:// protocol manually:
+#    HKCU\SOFTWARE\Classes\claudecode\shell\open\command → "ClaudeFocus.exe" "%1"
+
+# 4. Install BurntToast: Install-Module -Name BurntToast -Scope CurrentUser
+
+# 5. Write the permission_prompt hook to ~/.claude/settings.json
+
+# Or: buy the ZIP and run install.bat. Your call.
 ```
 
 **Verify it works:** ask Claude Code *"Create a file called hello.txt with the word test in it."* You'll see a toast the moment the permission prompt fires.
-
-To remove: double-click `uninstall.bat`.
 
 ---
 
@@ -66,18 +83,6 @@ Pointer-level precision. No heuristics. Perfect for multi-window setups.
 | VS Code / Cursor built-in | ⚠️ Functional via fallback matching |
 
 **Requirements:** Windows 10/11, .NET Framework 4.x (built-in), [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
-
----
-
-## 🛒 Get It
-
-<p align="center">
-  <a href="https://yanchengsi.gumroad.com/l/qzvzii">
-    <img src="https://img.shields.io/badge/Buy%20on%20Gumroad-%244.99-FF90E8?style=for-the-badge&logo=gumroad&logoColor=white&labelColor=000000" alt="Buy on Gumroad">
-  </a>
-  <br>
-  <sub>Standard License $4.99 · Full source code included · All sales final</sub>
-</p>
 
 ---
 
