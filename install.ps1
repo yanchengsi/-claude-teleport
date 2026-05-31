@@ -76,7 +76,7 @@ try {
 # Also precompile WindowHelper.dll (skips runtime JIT — cuts notification delay from ~4s to <1s)
 Write-Host "     Compiling WindowHelper.dll..." -ForegroundColor DarkGray
 try {
-    $dllResult = & $cscExe /out:$libDll /target:library /platform:x86 /nologo $libCs 2>&1
+    $dllResult = & $cscExe /out:$libDll /target:library /nologo $libCs 2>&1
     if ($LASTEXITCODE -ne 0) { throw "csc.exe DLL: exit code $LASTEXITCODE" }
     if (Test-Path $libDll) {
         Write-Host "     OK: WindowHelper.dll ($((Get-Item $libDll).Length) bytes)" -ForegroundColor DarkGray

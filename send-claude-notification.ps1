@@ -6,12 +6,18 @@ $log = @()
 $log += "=== $(Get-Date -Format 'o') ==="
 $log += "Hook PID: $PID"
 
-# Load WindowHelper from precompiled DLL (install.ps1 compiles this at install time — no JIT delay)
+# Load WindowHelper — try precompiled DLL first, fall back to .cs source
 $dllPath = "$PSScriptRoot\lib\WindowHelper.dll"
+$loaded = $false
 if (Test-Path $dllPath) {
-    Add-Type -Path $dllPath -ErrorAction Stop
-} else {
-    $log += "DLL not found, falling back to CS compile (will be slow)"
+    try {
+        Add-Type -Path $dllPath -ErrorAction Stop
+        $loaded = $true
+    } catch {
+        $log += "DLL load failed ($_), falling back to CS"
+    }
+}
+if (-not $loaded) {
     Add-Type -Path "$PSScriptRoot\lib\WindowHelper.cs" -ErrorAction Stop
 }
 
